@@ -12,6 +12,11 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "posthtml": "^0.16.6",
+    "posthtml-include": "^1.7.4"
+  },
   "bugs": {
     "url": "https://github.com/keshavsoft/ExpressESMStatic/issues"
   },
