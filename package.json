@@ -1,0 +1,19 @@
+{
+  "name": "expressesmstatic",
+  "version": "1.0.0",
+  "description": "Static files in public folder : html, css and js. use npm:posthtml",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keshavsoft/ExpressESMStatic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keshavsoft/ExpressESMStatic/issues"
+  },
+  "homepage": "https://github.com/keshavsoft/ExpressESMStatic#readme"
+}
