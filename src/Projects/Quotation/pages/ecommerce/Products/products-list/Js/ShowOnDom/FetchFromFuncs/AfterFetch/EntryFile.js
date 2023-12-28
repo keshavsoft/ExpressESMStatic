@@ -1,6 +1,6 @@
 let CommonTableId = "products-list";
 
-let StartFunc = ({ inDataToShow }) => {
+let StartFunc1 = ({ inDataToShow }) => {
     if (document.getElementById(CommonTableId)) {
         const dataTableSearch = new simpleDatatables.DataTable(`#${CommonTableId}`, {
             searchable: false,
@@ -34,5 +34,15 @@ let StartFunc = ({ inDataToShow }) => {
 let LocalFuncPrepareRows = ({ inDataToShow }) => {
     return inDataToShow.map(item => Object.values((({ ItemName, ItemRate }) => ({ ItemName, ItemRate }))(item)))
 };
+
+
+const StartFunc = ({ inDataToShow }) => {
+
+    var $table = $('#products-list');
+    $table.bootstrapTable({
+        data:  inDataToShow 
+    });
+    
+}
 
 export { StartFunc }
