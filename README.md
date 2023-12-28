@@ -1,2 +1,4 @@
 # ExpressESMStatic
-Static files in public folder : html, css and js. use npm:posthtml
+
+1.Run npm i 
+2.Run node ForQuotation
