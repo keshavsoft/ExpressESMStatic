@@ -24,7 +24,7 @@ let jFLocalFromDomItemRateId = () => {
     let jVarLocalHtmlItemRateId = 'ItemRateId';
     let jVarHtmlItemRateId = document.getElementById(jVarLocalHtmlItemRateId);
     let jVarHtmlItemRateIdValue = jVarHtmlItemRateId.value.trim();
-    return jVarHtmlItemRateIdValue;
+    return parseInt(jVarHtmlItemRateIdValue);
 };
 
 export { StartFunc }
