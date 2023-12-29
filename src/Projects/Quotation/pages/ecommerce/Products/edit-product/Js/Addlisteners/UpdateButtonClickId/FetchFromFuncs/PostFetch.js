@@ -3,7 +3,6 @@ import { StartFunc as StartFuncFetchHeaders } from "./FetchHeaders/EntryFile.js"
 let StartFunc = async () => {
     let jVarLocalUuId = getUrlQueryParams({ inGetKey: "UuId" });
     let jVarLocalFetchHeaders = StartFuncFetchHeaders();
-    console.log("jVarLocalUuId:",jVarLocalUuId,jVarLocalFetchHeaders);
 
     let jVarLocalFetchUrl = `/Projects/Quotation/Items/${jVarLocalUuId}`;
     let response = await fetch(jVarLocalFetchUrl, jVarLocalFetchHeaders);
