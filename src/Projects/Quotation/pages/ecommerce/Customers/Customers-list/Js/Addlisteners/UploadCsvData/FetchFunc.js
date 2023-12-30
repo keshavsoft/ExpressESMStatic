@@ -1,6 +1,6 @@
 let StartFunc = async ({ inBodyData }) => {
 
-    let jVarLocalFetchUrl = `/projects/Quotation/Customers`;
+    let jVarLocalFetchUrl = `/projects/Quotation/Customers/Upload`;
     let jVarFromFetch = await fetch(jVarLocalFetchUrl, {
         method: 'POST',
         headers: {
