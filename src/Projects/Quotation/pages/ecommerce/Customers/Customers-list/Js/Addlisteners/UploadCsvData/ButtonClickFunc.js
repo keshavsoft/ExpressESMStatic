@@ -16,13 +16,10 @@ let StartFunc = async () => {
             reader.onload = async function (e) {
                 const csvData = e.target.result;
                 const jsonArray = convertCsvToJsonFunction(csvData);
-
                 let JsonStrfey = JSON.stringify(jsonArray);
-                console.log("JsonStrfey:",JsonStrfey);
-                let jVarLocalBodyData = await StartFuncPreparePostData({ inCsvJsonData: JsonStrfey });
+                let jVarLocalBodyData = await StartFuncPreparePostData({ inCsvJsonData: jsonArray });
                 let response = await StartFuncFetchFunc({ inBodyData: jVarLocalBodyData });
                 StartFuncAfterFetch({ inFromFetch: response });
-                console.log("CsvintoJson:", CsvintoJson);
             };
 
             reader.readAsText(file);
