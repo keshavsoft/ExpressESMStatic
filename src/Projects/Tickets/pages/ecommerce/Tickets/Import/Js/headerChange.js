@@ -3,10 +3,10 @@ let jFChangeHeaderActiveClass = () => {
 };
 
 let jFClassAddFunc = () => {
-    let jVarLocalCustomerMainTabId = document.getElementById("CustomerMainTabId");
-    let jVarLocalCustomersTab = document.getElementById("CustomersTab");
-    let jVarLocalCustomerAnchorTagId = document.getElementById("CustomerAnchorTagId");
-    let jVarLocalCustomerLiTagId = document.getElementById("CustomerLiTagId");
+    let jVarLocalCustomerMainTabId = document.getElementById("TicketMainTabId");
+    let jVarLocalCustomersTab = document.getElementById("TicketTab");
+    let jVarLocalCustomerAnchorTagId = document.getElementById("ImportLiTagId");
+    let jVarLocalCustomerLiTagId = document.getElementById("NewImportAnchorTagId");
 
     if (jVarLocalCustomerMainTabId !== null) {
         jVarLocalCustomerMainTabId.classList.add("active");
