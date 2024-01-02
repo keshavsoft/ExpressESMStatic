@@ -1,18 +1,11 @@
 let StartFunc = ({ inFromFetch }) => {
-    console.log("inFromFetch:",inFromFetch);
     if (inFromFetch.KTF) {
-        // jFLocalPostFetchNotArray({ inRowPk: inFromFetch.NewRowPK });
+        window.location.href = ""
     } else {
-        // Swal.fire(inFromFetch.KReason);
+        Swal.fire(inFromFetch.KReason);
     }
 };
 
-let jFLocalPostFetchNotArray = ({ inRowPk }) => {
-    const myUrlWithParams = new URL(`${window.location.origin}${window.location.pathname}`);
-    myUrlWithParams.searchParams.append("FromSave", true);
-    // myUrlWithParams.searchParams.append("NewRowPK", inRowPk);
 
-    window.location.href = myUrlWithParams.href;
-};
 
 export { StartFunc };
