@@ -7,7 +7,7 @@ let StartFunc = () => {
 };
 
 let jFLocalHtmlId = () => {
-    let jVarLocalHtmlId = "csvFileInput";
+    let jVarLocalHtmlId = "UploadFileInputId";
     let jVarCreateFolderInputId = document.getElementById(jVarLocalHtmlId);
     let jVarLocalFolderName = jVarCreateFolderInputId.value;
 
