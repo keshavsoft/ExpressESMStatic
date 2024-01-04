@@ -44,7 +44,6 @@
     <!-- side Menu -->
     <include src="./src/components/Tickets/Pages/dashboards/analytics/aside.html"></include>
 
-
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Navbar -->
         <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
@@ -398,51 +397,51 @@
 
     
     <div class="modal fade" id="exampleModalSignUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-            <div class="modal-content">
-                <div class="modal-body p-0">
-                    <div class="card card-plain">
-                        <div class="card-header pb-0 text-left">
-                            <h5 class="">LogIn</h5>
-                            <p class="mb-0">Enter your login credentials to go ahead from here.</p>
-                        </div>
-                        <div class="card-body pb-3">
-                            <form role="form text-left">
-                                <div class="input-group input-group-outline my-3">
-                                    <label class="form-label">User Name</label>
-                                    <input type="text" name="UserName" class="form-control">
-                                </div>
-                                <div class="input-group input-group-outline my-3">
-                                    <label class="form-label">Password</label>
-                                    <input type="password" name="Password" class="form-control">
-                                </div>
-                                <div class="form-check form-check-info text-left">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        I agree the <a href="javascrpt:;" class="text-dark font-weight-bolder">Terms and
-                                            Conditions</a>
-                                    </label>
-                                </div>
-                                <div class="text-center">
-                                    <button type="button" id="SignInButtonId"
-                                        class="btn bg-gradient-primary btn-lg btn-rounded w-100 mt-4 mb-0">Sign
-                                        In</button>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="card-footer text-center pt-0 px-sm-4 px-1">
-                            <p class="mb-4 mx-auto">
-                                Already have an account?
-                                <a href="javascrpt:;" class="text-primary text-gradient font-weight-bold">Sign Up</a>
-                            </p>
-                        </div>
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <div class="card card-plain">
+                    <div class="card-header pb-0 text-left">
+                        <h5 class="">LogIn</h5>
+                        <p class="mb-0">Enter your login credentials to go ahead from here.</p>
+                    </div>
+                    <div class="card-body pb-3">
+                        <form role="form text-left" id="LoginFormId">
+                            <div class="input-group input-group-outline my-3">
+                                <label class="form-label">User Name</label>
+                                <input type="text" name="UserName" class="form-control">
+                            </div>
+                            <div class="input-group input-group-outline my-3">
+                                <label class="form-label">Password</label>
+                                <input type="password" name="Password" class="form-control">
+                            </div>
+                            <div class="form-check form-check-info text-left">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"
+                                    checked="">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I agree the <a href="javascrpt:;" class="text-dark font-weight-bolder">Terms and
+                                        Conditions</a>
+                                </label>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" id="SignInButtonId"
+                                    class="btn bg-gradient-primary btn-lg btn-rounded w-100 mt-4 mb-0">Sign
+                                    In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center pt-0 px-sm-4 px-1">
+                        <p class="mb-4 mx-auto">
+                            Already have an account?
+                            <a href="javascrpt:;" class="text-primary text-gradient font-weight-bold">Sign Up</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
     
     <!--   Core JS Files   -->
@@ -451,51 +450,7 @@
     <script src="../../../assets/js/plugins/perfect-scrollbar.min.js"></script>
     <script src="../../../assets/js/plugins/smooth-scrollbar.min.js"></script>
     <script src="../../../assets/js/plugins/datatables.js"></script>
-    <!-- <script>
-        if (document.getElementById('products-list')) {
-            let jVarLocalTableData = [];
-            let jVarLocalFirstRow = {};
-            jVarLocalFirstRow.CustomerName = "Keshav";
-            jVarLocalFirstRow.Contact = 9898;
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-            jVarLocalTableData.push(jVarLocalFirstRow);
-
-            const dataTableSearch = new simpleDatatables.DataTable("#products-list", {
-                searchable: false,
-                fixedHeight: true,
-                perPage: 5,
-                data: {
-                    headings: Object.keys(jVarLocalTableData[0]),
-                    data: jVarLocalTableData.map(item => Object.values(item))
-                }
-            });
-
-            document.querySelectorAll(".export").forEach(function (el) {
-                el.addEventListener("click", function (e) {
-                    var type = el.dataset.type;
-
-                    var data = {
-                        type: type,
-                        filename: "material-" + type,
-                    };
-
-                    if (type === "csv") {
-                        data.columnDelimiter = "|";
-                    }
-
-                    dataTableSearch.export(data);
-                });
-            });
-        };
-    </script> -->
-    <!-- Kanban scripts -->
+   
     <script src="../../../assets/js/plugins/dragula/dragula.min.js"></script>
     <script src="../../../assets/js/plugins/jkanban/jkanban.js"></script>
     <script>
@@ -507,10 +462,7 @@
             Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
         }
     </script>
-    <!-- Github buttons -->
     <script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
-    <!-- <script src="../../../assets/js/material-dashboard.min.js?v=3.0.6"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script src="../../../assets/js/material-dashboard.js"></script>
