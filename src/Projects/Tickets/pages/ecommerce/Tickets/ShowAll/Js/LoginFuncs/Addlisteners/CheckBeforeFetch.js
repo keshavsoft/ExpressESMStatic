@@ -1,7 +1,7 @@
 let StartFunc = () => {
-    if (jFLocalHtmlId() === false) {
-        return false;
-    };
+    // if (jFLocalHtmlId() === false) {
+    //     return false;
+    // };
 
     return true;
 };

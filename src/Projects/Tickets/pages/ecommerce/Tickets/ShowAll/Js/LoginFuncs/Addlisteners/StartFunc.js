@@ -1,7 +1,7 @@
 import { StartFunc as StartFuncButtonClickFunc } from "./ButtonClickFunc.js";
 
 const StartFunc = () => {
-    let ButtonClickId = "exampleModalSignUp";
+    let ButtonClickId = "SignInButtonId";
 
     let jVarLocalCreateFolderButtonId = document.getElementById(ButtonClickId);
 
