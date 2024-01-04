@@ -30,7 +30,6 @@ let StartFunc = ({ inDataToShow }) => {
         });
     };
 };
-
 let LocalFuncPrepareRows = ({ inDataToShow }) => {
     return inDataToShow.map(item => Object.values((({ Jobno, CreationDate,CustomerName,Address,MobileNo,ContactNo ,ModelName,JobClassification,ProductGroupName,WarrantyType,AgentRemarks,CallFromNo,Panasonic}) => ({Jobno, CreationDate,CustomerName,Address,MobileNo,ContactNo ,ModelName,JobClassification,ProductGroupName,WarrantyType,AgentRemarks,CallFromNo,Panasonic}))(item)))
 };
