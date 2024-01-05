@@ -12,8 +12,9 @@ let jFLocalPrepareHeaderForDataOnly = (inFromFetch) => {
     let jVarLocalColumns = Object.keys(inFromFetch[0]);
     jVarLocalColumns.forEach(element => {
         let jVarLocalNewTh = document.createElement("th");
-        jVarLocalNewTh.innerHTML = element;
         jVarLocalNewTh.dataset.field = element;
+        jVarLocalNewTh.setAttribute("data-filter-control", "select");
+        jVarLocalNewTh.innerHTML = element;
         jVarLocaltableHeadRow.appendChild(jVarLocalNewTh);
     });
 };

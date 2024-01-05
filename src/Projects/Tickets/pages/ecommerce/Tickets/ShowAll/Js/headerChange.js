@@ -5,8 +5,8 @@ let jFChangeHeaderActiveClass = () => {
 let jFClassAddFunc = () => {
     let jVarLocalCustomerMainTabId = document.getElementById("TicketMainTabId");
     let jVarLocalCustomersTab = document.getElementById("TicketTab");
-    let jVarLocalCustomerAnchorTagId = document.getElementById("ImportLiTagId");
-    let jVarLocalCustomerLiTagId = document.getElementById("NewImportAnchorTagId");
+    let jVarLocalCustomerAnchorTagId = document.getElementById("ShowAll");
+    let jVarLocalCustomerLiTagId = document.getElementById("ShowAllAnchorTagId");
 
     if (jVarLocalCustomerMainTabId !== null) {
         jVarLocalCustomerMainTabId.classList.add("active");
